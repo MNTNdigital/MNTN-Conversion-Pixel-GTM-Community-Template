@@ -1,2 +1,2 @@
-# MNTN Tracking Pixel GTM Community Template
+# MNTN Conversion Pixel GTM Community Template
 
