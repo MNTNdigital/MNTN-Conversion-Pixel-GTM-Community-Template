@@ -95,9 +95,6 @@ const url = "https://dx.mountain.com/spx?conv=1&shaid=" + encodeUriComponent(acc
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure);
 
 
-logToConsole("FIRE THE TEMPLATE::::::",url);
-
-
 ___WEB_PERMISSIONS___
 
 [
