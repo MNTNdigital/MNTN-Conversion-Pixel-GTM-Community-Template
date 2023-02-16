@@ -86,7 +86,13 @@ if(conversionOrderAmount !== "ORDER AMOUNT" && conversionOrderAmount !== undefin
 
 
 // use the provided APIs to create the call to send pixels
-const url = "https://px.mountain.com/sti?conv=1&shaid=" + encodeUriComponent(account) + "&shoid=" + conversionOrderId + "&shoamt=" + conversionOrderAmount + "&cb=" + encodeUriComponent(cb)  + "&plh=" + plh();
+const url = "https://dx.mountain.com/spx?conv=1&shaid=" + 
+encodeUriComponent(account) + "&tdr=" + 
+encodeUriComponent(tdr()) + "&plh=" + 
+encodeUriComponent(plh()) + "&cb=" + 
+encodeUriComponent(cb) + "&shoid=" + conversionOrderId + 
+"&shoamt=" + conversionOrderAmount + 
+"&shocur=&shopid&shoq=&shoup=&shpil=";
 
 
 // require success and failure calls
