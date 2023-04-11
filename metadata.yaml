@@ -16,9 +16,11 @@ homepage: "https://mountain.com/"
 documentation: "https://mountain.com/"
 versions:
 # Latest Version
-  - sha: 01efb16b938632d518100ed9ddf3064f493cf74c
-    changeNotes: Fixed bug for for encoded plh and tdr fields 
+- sha: 2c5e92919941b35cf3cef0da21dd06ded6bf9a01
+  changeNotes: Recreated the deleted template and template file.  
 
-# Initial Version
-  - sha: aeb202fb6186ab17853bf1c126d44827ac052c94
-    changeNotes: Initial Version
+# Older Versions
+- sha: 01efb16b938632d518100ed9ddf3064f493cf74c
+  changeNotes: Fixed bug for for encoded plh and tdr fields 
+- sha: aeb202fb6186ab17853bf1c126d44827ac052c94
+  changeNotes: Initial Version
