@@ -32,7 +32,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "advertisertId",
-    "displayName": "Advertiser ID ( required )",
+    "displayName": "MNTN Advertiser ID ( required )",
     "simpleValueType": true,
     "valueValidators": [
       {
@@ -54,11 +54,7 @@ ___TEMPLATE_PARAMETERS___
     "name": "conversionOrderAmount",
     "displayName": "Order Amount ( Optional )",
     "simpleValueType": true,
-    "valueValidators": [
-      {
-        "type": "NUMBER"
-      }
-    ]
+    "valueValidators": []
   }
 ]
 
@@ -213,6 +209,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 4/11/2023, 8:04:02 AM
+Created on 4/13/2023, 8:57:48 AM
 
 
