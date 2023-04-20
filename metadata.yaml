@@ -16,10 +16,12 @@ homepage: "https://mountain.com/"
 documentation: "https://mountain.com/"
 versions:
 # Latest Version
-- sha: 79bde3ea6dfaab057a0282bd2e3f1313df04789e
-  changeNotes: Moving forward with javascript versions first  
+- sha: 5fd38e8d92ad1fa73ea360df11958b53463fa158
+  changeNotes: Updated permissions
 
 # Older Versions
+- sha: 79bde3ea6dfaab057a0282bd2e3f1313df04789e
+  changeNotes: Moving forward with javascript versions first  
 - sha: 2c5e92919941b35cf3cef0da21dd06ded6bf9a01
   changeNotes: Recreated the deleted template and template file.  
 - sha: 01efb16b938632d518100ed9ddf3064f493cf74c
