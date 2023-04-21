@@ -31,7 +31,7 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "type": "TEXT",
-    "name": "advertisertId",
+    "name": "advertiserId",
     "displayName": "MNTN Advertiser ID ( required )",
     "simpleValueType": true,
     "valueValidators": [
