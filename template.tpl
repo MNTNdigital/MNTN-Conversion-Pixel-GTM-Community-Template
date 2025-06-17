@@ -54,13 +54,20 @@ ___TEMPLATE_PARAMETERS___
     "name": "conversionOrderAmount",
     "displayName": "Order Amount ( Optional )",
     "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "conversionType",
+    "displayName": "Conversion Type ( Optional )",
+    "simpleValueType": true,
+    "help": "Enter the type of conversion (e.g., Purchase, Lead, SignUp, etc.)."
   }
 ]
 
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-// require relevant API for building DX call
+/* require relevant API for building DX call */
 const sendPixel = require('sendPixel');
 const encodeUriComponent = require('encodeUriComponent');
 const tdr = require('getReferrerUrl');
@@ -74,9 +81,10 @@ const powerful =  Math.pow(randomNumber, 17);
 const cb = Math.floor(powerful);
 const makeString = require('makeString');
 
-// capture values of template fields for advertiser
+/* capture values of template fields for advertiser */
 const account = data.advertiserId;
 const conversionOrderId = data.conversionOrderId || "ORDER ID";
+const conversionType = data.conversionType || "";
 
 let conversionOrderAmount = data.conversionOrderAmount || "ORDER AMOUNT";
 if(conversionOrderAmount !== "ORDER AMOUNT" && conversionOrderAmount !== undefined){
@@ -84,18 +92,19 @@ if(conversionOrderAmount !== "ORDER AMOUNT" && conversionOrderAmount !== undefin
 }
 
 
-// use the provided APIs to create the call to send pixels
-const url = "https://dx.mountain.com/spx?conv=1&shaid=" + 
-encodeUriComponent(account) + "&tdr=" + 
-encodeUriComponent(tdr()) + "&plh=" + 
-encodeUriComponent(plh()) + "&cb=" + 
-encodeUriComponent(cb) + "&shoid=" + conversionOrderId + 
-"&shoamt=" + conversionOrderAmount + 
-"&shocur=&shopid&shoq=&shoup=&shpil=";
+/* use the provided APIs to create the call to send pixels */
+const url = "https://dx.mountain.com/spx?conv=1" + 
+  "&shaid=" + encodeUriComponent(account) + 
+  "&tdr=" + encodeUriComponent(tdr()) + 
+  "&plh=" + encodeUriComponent(plh()) + 
+  "&cb=" + encodeUriComponent(cb) + 
+  "&shoid=" + conversionOrderId + 
+  "&shoamt=" + conversionOrderAmount + 
+  "&type=" + encodeUriComponent(conversionType) +
+  "&shocur=&shopid&shoq=&shoup=&shpil=";
 
 
-// require success and failure calls
-//injectScript(data.gtmOnSuccess, data.gtmOnFailure);
+/* require success and failure calls */
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure);
 
 
