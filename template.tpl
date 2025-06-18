@@ -55,13 +55,13 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Order Amount ( Optional )",
     "simpleValueType": true
   },
-  {
-    "type": "TEXT",
-    "name": "conversionType",
-    "displayName": "Conversion Type ( Optional )",
-    "simpleValueType": true,
-    "help": "Enter the type of conversion (e.g., Purchase, Lead, SignUp, etc.)."
-  }
+   {
+  "type": "TEXT",
+  "name": "conversionType",
+  "displayName": "Conversion Type (Optional)",
+  "simpleValueType": true,
+  "help": "Enter the type of conversion (e.g., Purchase, Lead, Sign Up). Use only letters, dashes (-), underscores (_), or spaces. Special characters like @, %, ^, = are not allowed."
+ }
 ]
 
 
