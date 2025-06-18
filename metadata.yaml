@@ -15,11 +15,12 @@
 homepage: "https://mountain.com/"
 documentation: "https://mountain.com/"
 versions:
-# Latest Version
-- sha: 206755fbdf04f53819ac91525091716639aaee98
-  changeNotes: Gtm update
+- sha: c5379a56b946a626e5bac10dde63463fce6127f9
+  changeNotes: Added a new field called conversion type
 
 # Older Versions
+- sha: 206755fbdf04f53819ac91525091716639aaee98
+  changeNotes: Gtm update
 - sha: 5fd38e8d92ad1fa73ea360df11958b53463fa158
   changeNotes: Updated permissions
 - sha: 79bde3ea6dfaab057a0282bd2e3f1313df04789e
